@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/light_orange"
+    tools:context=".RemoveProductActivity">
+
+    <EditText
+        android:id="@+id/et_item_remove"
+        android:inputType="text"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:background="@color/white" />
+
+    <Button
+        android:id="@+id/bt_item_remove"
+        android:text="@string/remove_item_from_storage"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+    <Button
+        android:id="@+id/bt_back_to_main_from_remove"
+        android:text="Home"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+
+</LinearLayout>
