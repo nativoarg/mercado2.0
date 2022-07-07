@@ -33,7 +33,7 @@ class AddProductActivity : AppCompatActivity() {
                 enterExpDateText.text.toString(),
                 enterPriceText.text.toString().toDouble(),
                 enterDiscountText.text.toString().toDouble(),
-                false, //A resolver//
+                validateDiscountStatus().toString().toBoolean(), //A resolver//
                 enterWeightText.text.toString(),
                 "NOPE" //A resolver//
             )
@@ -49,4 +49,18 @@ class AddProductActivity : AppCompatActivity() {
         enterDiscountText = findViewById(R.id.et_enter_discount)
         enterWeightText = findViewById(R.id.et_enter_weight)
     }
+    fun validateDiscountStatus(){
+        if(enterDiscountText.text.toString().toDouble() > 0.0){
+            true
+        }
+    }
+    fun applyDiscount(){
+        var validation = validateDiscountStatus().toString().toBoolean()
+        if(validation == true){
+            enterPriceText.text.toString().toDouble() - (enterPriceText.text.toString().toDouble() * enterDiscountText.text.toString().toDouble())
+        }else{
+            enterPriceText.text.toString().toDouble()
+        }
+    }
+
 }
